@@ -1,1 +1,0 @@
-# namitha.github.io
