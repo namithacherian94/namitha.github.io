@@ -8,3 +8,18 @@ t.AF.id=t.AF.id||i,t.AF.plugins={},o=e.createElement(n),p=e.getElementsByTagName
 o.src="https://websdk.appsflyer.com?"+(c.length>0?"st="+c.split(",").sort().join(",")+"&":"")+(i.length>0?"af_id="+i:""),
 p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba","999819dc-7220-4c11-9921-c7927ec597d4")
 </script>
+<html>
+    <head>
+        <!-- Assume that the server returns a response with details about the newly subscribed user -->
+        <!-- Alternatively, you can extract data from localstorage or cookies,
+            in case data was set in either of them during the subscription process
+        -->
+        <script>window.onload = function(){
+            AF('pba', 'event', {eventType: 'EVENT', eventCategory: 'conversion',eventName: 'subscription', eventLabel: 'newsletters'});
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Thank You for Subscribing to Our Newsletter</h1>
+    </body>
+</html>
